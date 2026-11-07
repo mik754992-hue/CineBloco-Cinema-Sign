@@ -22,10 +22,9 @@ versionRange="[1.21.1]"
 ordering="NONE"
 side="BOTH"
 
-# Once you confirm CineBloco's real mod id, uncomment and fix it:
-# [[dependencies.${mod_id}]]
-# modId="cinebloco"
-# type="required"
-# versionRange="[1.0.2,)"
-# ordering="AFTER"
-# side="BOTH"
+[[dependencies.${mod_id}]]
+modId="cinebloco"
+type="required"
+versionRange="[1.0,)"
+ordering="AFTER"
+side="BOTH"
