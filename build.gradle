@@ -26,7 +26,7 @@ neoForge {
 dependencies {
     // Drop the CineBloco NeoForge 1.21.1 jar into ./libs so you can compile against it and run it in dev.
     compileOnly fileTree(dir: 'libs', include: '*.jar')
-    localRuntime fileTree(dir: 'libs', include: '*.jar')
+    runtimeOnly fileTree(dir: 'libs', include: '*.jar')
 }
 
 tasks.withType(ProcessResources).configureEach {
