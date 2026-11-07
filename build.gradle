@@ -1,0 +1,36 @@
+plugins {
+    id 'java-library'
+    // If this version is not found, use the latest 2.x from https://plugins.gradle.org/plugin/net.neoforged.moddev
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+
+version = mod_version
+base { archivesName = mod_id }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenLocal()
+}
+
+neoForge {
+    version = project.neo_version
+    runs {
+        client { client() }
+        server { server(); programArgument '--nogui' }
+    }
+    mods {
+        "${mod_id}" { sourceSet sourceSets.main }
+    }
+}
+
+dependencies {
+    // Drop the CineBloco NeoForge 1.21.1 jar into ./libs so you can compile against it and run it in dev.
+    compileOnly fileTree(dir: 'libs', include: '*.jar')
+    localRuntime fileTree(dir: 'libs', include: '*.jar')
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var props = [mod_id: mod_id, mod_version: mod_version]
+    inputs.properties props
+    filesMatching('META-INF/neoforge.mods.toml') { expand props }
+}

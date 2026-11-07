@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:stick" },
+    { "item": "minecraft:redstone" },
+    { "item": "minecraft:ender_pearl" }
+  ],
+  "result": { "id": "cinemasign:projector_linker", "count": 1 }
+}

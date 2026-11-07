@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="Cinema Sign"
+description='''A sign for your cinema. Link it to a CineBloco projector: [CLOSED] when idle, [NOW SHOWING: ...] when playing.'''
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="BOTH"
+
+# Once you confirm CineBloco's real mod id, uncomment and fix it:
+# [[dependencies.${mod_id}]]
+# modId="cinebloco"
+# type="required"
+# versionRange="[1.0.2,)"
+# ordering="AFTER"
+# side="BOTH"

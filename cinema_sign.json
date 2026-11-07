@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cinemasign:block/cinema_sign" },
+    "facing=east":  { "model": "cinemasign:block/cinema_sign", "y": 90 },
+    "facing=south": { "model": "cinemasign:block/cinema_sign", "y": 180 },
+    "facing=west":  { "model": "cinemasign:block/cinema_sign", "y": 270 }
+  }
+}
